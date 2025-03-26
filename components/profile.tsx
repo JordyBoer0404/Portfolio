@@ -1,10 +1,11 @@
 import React from "react";
-import { Avatar } from "@heroui/avatar";
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { Button } from "./ui/button";
 
 const profile = () => {
   return (
-    <div className="flex flex-row p-16">
-      <div className="w-1/2 max-w-1/2">
+    <div className="flex flex-col gap-4 md:gap-0 px-8 py-2 md:flex-row md:p-16">
+      <div className="md:w-1/2 md:max-w-1/2">
         <h1>Welkom</h1>
         <div className="flex flex-col gap-4">
           <h4>
@@ -21,17 +22,23 @@ const profile = () => {
           </h4>
         </div>
       </div>
-      <div className="flex flex-col w-1/2 gap-4 items-center justify-center">
-        <Avatar
-          className="w-40 h-40"
-          showFallback
-          isBordered
-          src="https://i.pravatar.cc/150?u=a04258114e29026708c"
-        />
-        <div className="flex flex-row gap-2">
-          <a>Github</a>
-          <a>Linkedin</a>
-          <a>email</a>
+      <div className="flex flex-col md:w-1/2 gap-4 items-center justify-center">
+        <Avatar>
+          <AvatarImage src="https://github.com/shadcn.png" />
+          <AvatarFallback>Loading...</AvatarFallback>
+        </Avatar>
+        <div className="flex flex-row">
+          <Button variant="link">
+            <a href="https://www.linkedin.com/in/jordy-boer-326843187/">
+              LinkedIn
+            </a>
+          </Button>
+          <Button variant="link">
+            <a href="https://github.com/JordyBoer0404">Github</a>
+          </Button>
+          <Button variant="link">
+            <a href="mailto:jordy.boer.040400@gmail.com">Email</a>
+          </Button>
         </div>
       </div>
     </div>

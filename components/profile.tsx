@@ -4,16 +4,18 @@ import { Button } from "./ui/button";
 
 const profile = () => {
   return (
-    <div className="flex flex-col gap-4 md:gap-0 px-8 py-2 md:flex-row md:p-16">
+    <div className="flex flex-col gap-4 md:gap-0 py-2 md:flex-row md:py-16">
       <div className="md:w-1/2 md:max-w-1/2">
-        <h1>Welkom</h1>
+        <h1>Welkom!</h1>
+        <h2>
+          Mijn naam is <span className="text-[#eb5e28]">Jordy Boer.</span>
+        </h2>
         <div className="flex flex-col gap-4">
           <h4>
-            Mijn naam is Jordy Boer. Ik ben een gemotiveerde junior software
-            engineer met een passie voor ontwikkeling en technologie. Mijn doel
-            is om mijn kwaliteiten en vaardigheden in te zetten in mijn
-            persoonlijk en bedrijfs leven, om mijn ICT-gerelateerde kennis te
-            vergroten en te verbeteren.
+            Ik ben een gemotiveerde junior software engineer met een passie voor
+            ontwikkeling en technologie. Mijn doel is om mijn kwaliteiten en
+            vaardigheden in te zetten in mijn persoonlijk en bedrijfs leven, om
+            mijn ICT-gerelateerde kennis te vergroten en te verbeteren.
           </h4>
           <h4>
             Op deze website vind je mijn projecten, vaardigheden en informatie

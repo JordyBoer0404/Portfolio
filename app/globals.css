@@ -8,7 +8,7 @@
   --c2: #403d39;
   --c3: #eb5e28;
   --background: oklch(0.145 0 0);
-  --foreground: oklch(0.985 0 0);
+  --foreground: #fffcf2;
   --card: oklch(0.205 0 0);
   --card-foreground: oklch(0.985 0 0);
   --popover: oklch(0.205 0 0);
@@ -40,29 +40,10 @@
   --sidebar-ring: oklch(0.556 0 0);
 }
 
-html,
-body {
-  overflow-x: hidden;
-}
-body {
-  font-family: Roboto;
-  width: auto;
-}
-h1 {
-  color: var(--c3);
-  font-size: 90px;
-}
-h4 {
-  color: var(--foreground);
-  font-size: 20px;
-  text-align: left;
-}
-
 @theme inline {
-  --radius-sm: calc(var(--radius) - 4px);
-  --radius-md: calc(var(--radius) - 2px);
-  --radius-lg: var(--radius);
-  --radius-xl: calc(var(--radius) + 4px);
+  --color-c1: var(--c1);
+  --color-c2: var(--c2);
+  --color-c3: var(--c3);
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-card: var(--card);
@@ -103,4 +84,28 @@ h4 {
   body {
     @apply bg-background text-foreground;
   }
+}
+
+html,
+body {
+  overflow-x: hidden;
+}
+body {
+  font-family: Roboto;
+  width: auto;
+}
+h1 {
+  color: var(--c3);
+  font-size: 80px;
+  font-weight: 500;
+}
+h2 {
+  color: var(--foreground);
+  font-size: 28px;
+  margin-bottom: 8px;
+}
+h4 {
+  color: var(--foreground);
+  font-size: 20px;
+  text-align: left;
 }

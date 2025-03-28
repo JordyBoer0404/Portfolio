@@ -2,9 +2,9 @@ import React from "react";
 
 const navbar = () => {
   return (
-    <nav className="flex flex-row md:justify-between md:px-16 py-8">
+    <nav className="flex flex-row md:justify-between py-8">
       <div className="invisible md:visible ">
-        <p>Portfolio van Jordy Boer</p>
+        <p>Jordy Boer</p>
       </div>
       <div className="flex flex-row gap-2">
         <a>Projecten</a>

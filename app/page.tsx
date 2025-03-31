@@ -1,3 +1,4 @@
+import Education from "@/components/education";
 import Footer from "@/components/footer";
 import Navbar from "@/components/navbar";
 import Profile from "@/components/profile";
@@ -11,6 +12,7 @@ export default function Home() {
       <Profile />
       <Projects />
       <Skills />
+      <Education />
       <Footer />
     </main>
   );

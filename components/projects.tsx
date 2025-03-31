@@ -27,19 +27,18 @@ const projects = () => {
       description: "Playstation trophy hunting webapp",
       type: "Persoonlijk project",
       image: stockImage,
-      skills: ["Next.js", "Typescript", "React", "Tailwind"],
+      skills: ["Next.js", "Typescript", "React", "Tailwind", "Supabase"],
     },
     {
       title: "CyberGotchi",
-      description:
-        "Gamificatie-app om kinderen veilig internetgebruik te leren.",
+      description: "Gamificatie-app voor veilig internetgebruik",
       type: "School project",
       image: stockImage,
-      skills: ["React Native"],
+      skills: ["React Native", "Firebase"],
     },
     {
       title: "Offline routeplanner",
-      description: "Onderzoek en prototype voor een offline routeplanner",
+      description: "Prototype voor een offline routeplanner",
       type: "School project",
       image: stockImage,
       skills: ["C#", "Blazor WebAssembly"],
@@ -48,10 +47,11 @@ const projects = () => {
 
   return (
     <div className="flex flex-col py-8">
-      <h2 className="text-center">Projecten</h2>
+      <h3>Projecten</h3>
       <Carousel
         opts={{
           align: "start",
+          loop: true,
         }}
         className="w-full"
       >
@@ -69,7 +69,7 @@ const projects = () => {
                   </CardHeader>
                   <CardContent className="flex flex-col gap-4 aspect-square justify-center p-6">
                     <Image src={project.image} alt={project.title}></Image>
-                    <div className="flex flex-row gap-2">
+                    <div className="flex flex-row flex-wrap gap-2 ">
                       {project.skills.map((skill) => (
                         <Skill key={skill} skill={skill} />
                       ))}

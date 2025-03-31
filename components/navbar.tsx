@@ -3,7 +3,7 @@ import React from "react";
 const navbar = () => {
   return (
     <nav className="flex flex-row md:justify-between py-8">
-      <div className="invisible md:visible ">
+      <div className="invisible md:visible">
         <p>Jordy Boer</p>
       </div>
       <div className="flex flex-row gap-2">

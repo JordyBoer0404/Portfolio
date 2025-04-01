@@ -5,12 +5,12 @@ import { Button } from "./ui/button";
 const profile = () => {
   return (
     <div className="flex flex-col gap-4 md:gap-0 py-2 md:flex-row md:py-16">
-      <div className="md:w-1/2 md:max-w-1/2">
-        <h1>Welkom!</h1>
-        <h2>
-          Mijn naam is <span className="text-[#eb5e28]">Jordy Boer.</span>
-        </h2>
-        <div className="flex flex-col gap-4">
+      <div className="md:w-8/12 md:max-w-8/12">
+        <h1 className="text-center md:text-left font-medium text-c3 text-5xl md:text-7xl mb-4">
+          Welkom! <span className="text-foreground">mijn naam is </span> Jordy
+          Boer.
+        </h1>
+        <div className="flex flex-col gap-4 bg-background/80 rounded-2xl px-4 py-2">
           <h4>
             Ik ben een gemotiveerde junior software engineer met een passie voor
             ontwikkeling en technologie. Mijn doel is om mijn kwaliteiten en
@@ -24,7 +24,7 @@ const profile = () => {
           </h4>
         </div>
       </div>
-      <div className="flex flex-col md:w-1/2 gap-4 items-center justify-center">
+      <div className="flex flex-col md:w-4/12 gap-4 items-center justify-center">
         <Avatar>
           <AvatarImage src="https://github.com/shadcn.png" />
           <AvatarFallback>Loading...</AvatarFallback>

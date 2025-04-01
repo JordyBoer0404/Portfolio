@@ -26,7 +26,7 @@ const skills = () => {
   };
 
   return (
-    <div className="flex flex-col py-8">
+    <div className="flex flex-col py-8 bg-background rounded-t-2xl px-6">
       <h3>Vaardigheden</h3>
       <div className="flex flex-row flex-wrap">
         {Object.entries(vaardigheden).map(([vaardigheid, skills]) => (

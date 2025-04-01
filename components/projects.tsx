@@ -46,8 +46,10 @@ const projects = () => {
   ];
 
   return (
-    <div className="flex flex-col py-8">
-      <h3>Projecten</h3>
+    <div className="flex flex-col py-8 items-center">
+      <h3 className="w-fit bg-background/80 px-4 py-2 rounded-2xl">
+        Projecten
+      </h3>
       <Carousel
         opts={{
           align: "start",

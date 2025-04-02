@@ -1,6 +1,8 @@
 import React from "react";
 
-import stockImage from "../public/stock.jpg";
+import platinumDragonImg from "../public/platinumdragon.jpg";
+import cyberGotchiImg from "../public/cybergotchi.jpg";
+import routeplannerImg from "../public/routeplanner.jpg";
 
 import {
   Card,
@@ -26,21 +28,24 @@ const projects = () => {
       title: "Platinum Dragon",
       description: "Playstation trophy hunting webapp",
       type: "Persoonlijk project",
-      image: stockImage,
+      mobile: false,
+      image: platinumDragonImg,
       skills: ["Next.js", "Typescript", "React", "Tailwind", "Supabase"],
     },
     {
       title: "CyberGotchi",
       description: "Gamificatie-app voor veilig internetgebruik",
       type: "School project",
-      image: stockImage,
+      mobile: true,
+      image: cyberGotchiImg,
       skills: ["React Native", "Firebase"],
     },
     {
       title: "Offline routeplanner",
       description: "Prototype voor een offline routeplanner",
       type: "School project",
-      image: stockImage,
+      mobile: false,
+      image: routeplannerImg,
       skills: ["C#", "Blazor WebAssembly"],
     },
   ];
@@ -69,18 +74,34 @@ const projects = () => {
                     <CardTitle>{project.title}</CardTitle>
                     <CardDescription>{project.description}</CardDescription>
                   </CardHeader>
-                  <CardContent className="flex flex-col gap-4 aspect-square justify-center p-6">
-                    <Image
-                      className="rounded-2xl"
-                      src={project.image}
-                      alt={project.title}
-                    ></Image>
-                    <div className="flex flex-row flex-wrap gap-2 ">
-                      {project.skills.map((skill) => (
-                        <Skill key={skill} skill={skill} />
-                      ))}
-                    </div>
-                  </CardContent>
+                  {project.mobile ? (
+                    <CardContent className="flex flex-row aspect-square gap-4 items-center justify-center">
+                      <Image
+                        className="w-35 h-75 rounded-2xl"
+                        src={project.image}
+                        alt={project.title}
+                      ></Image>
+                      <div className="flex flex-col flex-wrap justify-end gap-2">
+                        {project.skills.map((skill) => (
+                          <Skill key={skill} skill={skill} />
+                        ))}
+                      </div>
+                    </CardContent>
+                  ) : (
+                    <CardContent className="flex flex-col gap-4 aspect-square justify-center">
+                      <Image
+                        className="aspect-[16/9] rounded-2xl"
+                        src={project.image}
+                        alt={project.title}
+                      ></Image>
+                      <div className="flex flex-row flex-wrap gap-2 ">
+                        {project.skills.map((skill) => (
+                          <Skill key={skill} skill={skill} />
+                        ))}
+                      </div>
+                    </CardContent>
+                  )}
+
                   <CardFooter>{project.type}</CardFooter>
                 </Card>
               </div>

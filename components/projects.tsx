@@ -46,8 +46,8 @@ const projects = () => {
   ];
 
   return (
-    <div className="flex flex-col py-8 items-center">
-      <h3 className="w-fit bg-background/80 px-4 py-2 rounded-2xl">
+    <div id="projects" className="flex flex-col py-8 items-center">
+      <h3 className="w-fit bg-background/95 px-4 py-2 rounded-2xl">
         Projecten
       </h3>
       <Carousel
@@ -61,7 +61,7 @@ const projects = () => {
           {projects.map((project) => (
             <CarouselItem
               key={project.title}
-              className="md:basis-1/2 lg:basis-1/3"
+              className="md:basis-1/2 xl:basis-1/3"
             >
               <div className="p-1">
                 <Card>
@@ -70,7 +70,11 @@ const projects = () => {
                     <CardDescription>{project.description}</CardDescription>
                   </CardHeader>
                   <CardContent className="flex flex-col gap-4 aspect-square justify-center p-6">
-                    <Image src={project.image} alt={project.title}></Image>
+                    <Image
+                      className="rounded-2xl"
+                      src={project.image}
+                      alt={project.title}
+                    ></Image>
                     <div className="flex flex-row flex-wrap gap-2 ">
                       {project.skills.map((skill) => (
                         <Skill key={skill} skill={skill} />

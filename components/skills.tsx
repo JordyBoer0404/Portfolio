@@ -12,7 +12,6 @@ const skills = () => {
       "Symfony",
       "Laravel",
       ".NET",
-      "Unity",
     ],
     "Software Development": [
       "HTML / CSS",
@@ -22,17 +21,17 @@ const skills = () => {
       "Databases (SQL)",
       "Scrum/Agile",
     ],
-    Overig: ["Onderzoek"],
+    Overig: ["Unity", "Onderzoek"],
   };
 
   return (
-    <div className="flex flex-col py-8 bg-background rounded-t-2xl px-6">
+    <div id="skills" className="flex flex-col py-8">
       <h3>Vaardigheden</h3>
-      <div className="flex flex-row flex-wrap">
+      <div className="flex flex-row flex-wrap py-2">
         {Object.entries(vaardigheden).map(([vaardigheid, skills]) => (
           <div
             key={vaardigheid}
-            className="flex flex-col sm:w-1/1 md:w-1/2 md:items-center gap-2 mb-6"
+            className="flex flex-col sm:w-1/1 md:w-1/2 xl:items-center md:px-4 gap-2 mb-6"
           >
             <h4 className="text-c3">{vaardigheid}</h4>
             <div className="flex flex-row flex-wrap gap-4">

@@ -1,4 +1,4 @@
-import Education from "@/components/education";
+import Educations from "@/components/educations";
 import Footer from "@/components/footer";
 import Navbar from "@/components/navbar";
 import Profile from "@/components/profile";
@@ -11,8 +11,10 @@ export default function Home() {
       <Navbar />
       <Profile />
       <Projects />
-      <Skills />
-      <Education />
+      <div className="bg-background rounded-2xl px-6 ring-1 ring-c2/50">
+        <Skills />
+        <Educations />
+      </div>
       <Footer />
     </main>
   );

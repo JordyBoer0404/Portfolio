@@ -1,15 +1,23 @@
+import Link from "next/link";
 import React from "react";
+import { Button } from "./ui/button";
 
 const navbar = () => {
   return (
-    <nav className="flex flex-row justify-between px-16 py-8">
-      <div>
-        <p>Portfolio van Jordy Boer</p>
+    <nav className="flex flex-row justify-end md:justify-between py-8">
+      <div className="invisible md:visible">
+        <p>Jordy Boer</p>
       </div>
-      <div className="flex flex-row gap-2">
-        <a>Projecten</a>
-        <a>Skills</a>
-        <a>Opleidingen</a>
+      <div className="flex flex-row">
+        <Button variant="link">
+          <Link href="#projects">Projecten</Link>
+        </Button>
+        <Button variant="link">
+          <Link href="#skills">Vaardigheden</Link>
+        </Button>
+        <Button variant="link">
+          <Link href="#education">Opleidingen</Link>
+        </Button>
       </div>
     </nav>
   );

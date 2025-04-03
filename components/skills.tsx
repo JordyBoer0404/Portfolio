@@ -2,7 +2,11 @@ import React from "react";
 import Skill from "./ui/skill";
 
 const skills = () => {
-  const vaardigheden = {
+  type Skills = {
+    [category: string]: string[];
+  };
+
+  const vaardigheden: Skills = {
     Programmeren: ["JavaScript", "TypeScript", "C#", "Java", "PHP"],
     "Frameworks & Libraries": [
       "Next.js",

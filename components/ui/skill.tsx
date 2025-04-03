@@ -1,8 +1,12 @@
 import React from "react";
 
-const skill = ({ skill }: { skill: any }) => {
+type SkillProps = {
+  skill: string;
+};
+
+const skill = ({ skill }: SkillProps) => {
   return (
-    <div className="border-1 border-c1 px-1 rounded-md">
+    <div className="ring-1 ring-c1 px-1 rounded-md">
       <p className="text-sm text-foreground">{skill}</p>
     </div>
   );

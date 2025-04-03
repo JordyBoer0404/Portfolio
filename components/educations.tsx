@@ -1,8 +1,15 @@
 import React from "react";
-import Education from "./ui/education";
+import Education from "./education";
 
 const educations = () => {
-  const educations = [
+  type Education = {
+    title: string;
+    school: string;
+    time: string;
+    status: string;
+  };
+
+  const educations: Education[] = [
     {
       title: "HBO ICT Software Engineer",
       school: "De Haagse Hogeschool",

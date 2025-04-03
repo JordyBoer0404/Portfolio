@@ -31,12 +31,17 @@ const profile = () => {
         </Avatar>
         <div className="flex flex-row bg-background/95 rounded-2xl p-2">
           <Button variant="link">
-            <a href="https://www.linkedin.com/in/jordy-boer-326843187/">
+            <a
+              href="https://www.linkedin.com/in/jordy-boer-326843187/"
+              target="_blank"
+            >
               LinkedIn
             </a>
           </Button>
           <Button variant="link">
-            <a href="https://github.com/JordyBoer0404">Github</a>
+            <a href="https://github.com/JordyBoer0404" target="_blank">
+              Github
+            </a>
           </Button>
           <Button variant="link">
             <a href="mailto:jordy.boer.040400@gmail.com">Email</a>

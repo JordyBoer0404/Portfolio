@@ -1,7 +1,18 @@
 import React from "react";
-import { Separator } from "./separator";
+import { Separator } from "./ui/separator";
 
-const education = ({ education }: { education: any }) => {
+type Education = {
+  title: string;
+  school: string;
+  time: string;
+  status: string;
+};
+
+type EducationProps = {
+  education: Education;
+};
+
+const education = ({ education }: EducationProps) => {
   return (
     <div className="flex flex-col items-center py-2 lg:w-1/2">
       <div className="w-fit space-y-1">

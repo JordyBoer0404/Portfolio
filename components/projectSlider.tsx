@@ -25,7 +25,7 @@ type ProjectProps = {
   projects: Project[];
 };
 
-const projectSlider = ({ projects }: ProjectProps) => {
+const ProjectSlider = ({ projects }: ProjectProps) => {
   const [api, setApi] = React.useState<CarouselApi>();
   const [current, setCurrent] = React.useState(0);
   const [count, setCount] = React.useState(0);
@@ -85,4 +85,4 @@ const projectSlider = ({ projects }: ProjectProps) => {
   );
 };
 
-export default projectSlider;
+export default ProjectSlider;

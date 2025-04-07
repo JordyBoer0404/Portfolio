@@ -35,7 +35,7 @@ const projectCard = ({ project }: ProjectProps) => {
       {project.mobile ? (
         <CardContent className="flex flex-row aspect-square gap-4 items-center justify-center">
           <Image
-            className="w-35 h-75 rounded-2xl"
+            className="w-30 h-65 lg:w-35 lg:h-75 rounded-2xl"
             src={project.image}
             alt={project.title}
           ></Image>

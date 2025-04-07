@@ -4,16 +4,9 @@ import platinumDragonImg from "../public/platinumdragon.jpg";
 import cyberGotchiImg from "../public/cybergotchi.jpg";
 import routeplannerImg from "../public/routeplanner.jpg";
 
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
-} from "@/components/ui/carousel";
 import { StaticImageData } from "next/image";
 
-import ProjectCard from "./projectCard";
+import ProjectSlider from "./projectSlider";
 
 const projects = () => {
   type Project = {
@@ -53,30 +46,9 @@ const projects = () => {
   ];
 
   return (
-    <div id="projects" className="flex flex-col py-8 items-center">
-      <h3 className="w-fit bg-background/95 px-4 py-2 rounded-2xl">
-        Projecten
-      </h3>
-      <Carousel
-        opts={{
-          align: "start",
-          loop: true,
-        }}
-        className="w-full"
-      >
-        <CarouselContent>
-          {projects.map((project) => (
-            <CarouselItem
-              key={project.title}
-              className="md:basis-1/2 xl:basis-1/3"
-            >
-              <ProjectCard project={project} />
-            </CarouselItem>
-          ))}
-        </CarouselContent>
-        <CarouselPrevious />
-        <CarouselNext />
-      </Carousel>
+    <div id="projects" className="flex flex-col py-12 items-center">
+      <h3>Projecten</h3>
+      <ProjectSlider projects={projects} />
     </div>
   );
 };

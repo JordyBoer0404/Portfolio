@@ -7,7 +7,7 @@
   --c1: #ccc5b9;
   --c2: #403d39;
   --c3: #eb5e28;
-  --background: oklch(0.145 0 0);
+  --background: oklch(0.175 0 0);
   --foreground: #fffcf2;
   --card: oklch(0.205 0 0);
   --card-foreground: oklch(0.985 0 0);
@@ -93,9 +93,9 @@ body {
 body {
   font-family: Roboto;
   width: auto;
-  position: relative;
+  /* position: relative; */
 }
-body:after {
+/* body:after {
   content: "";
   background-image: url("../public/bg.jpg");
   background-position: center center;
@@ -108,7 +108,7 @@ body:after {
   height: 100%;
   z-index: -1;
   opacity: 1;
-}
+} */
 h2 {
   color: var(--foreground);
   font-size: 28px;

@@ -11,7 +11,7 @@ export default function Home() {
       <Navbar />
       <Profile />
       <Projects />
-      <div className="bg-background rounded-2xl px-6 ring-1 ring-c2/50">
+      <div className="bg-card rounded-2xl px-6 border">
         <Skills />
         <Educations />
       </div>

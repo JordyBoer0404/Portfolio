@@ -19,8 +19,8 @@ const profile = () => {
           </h4>
           <h4>
             Op deze website vind je mijn projecten, vaardigheden en meer
-            informatie over mij. Neem gerust een kijkje en aarzel niet om
-            contact op te nemen!
+            informatie over mij. Aarzel niet om contact op te nemen of mijn
+            LinkedIn & Github te bekijken!
           </h4>
         </div>
       </div>

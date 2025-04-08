@@ -1,9 +1,8 @@
 @import "tailwindcss";
 @import "tw-animate-css";
 
-@custom-variant dark (&:is(.dark *));
-
 :root {
+  color-scheme: light;
   --c1: #ccc5b9;
   --c2: #403d39;
   --c3: #eb5e28;

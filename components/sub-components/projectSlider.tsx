@@ -8,18 +8,9 @@ import {
   CarouselItem,
   CarouselNext,
   CarouselPrevious,
-} from "./ui/carousel";
+} from "../ui/carousel";
 import ProjectCard from "./projectCard";
-import { StaticImageData } from "next/image";
-
-type Project = {
-  title: string;
-  description: string;
-  type: "Persoonlijk project" | "School project";
-  mobile: boolean;
-  image: StaticImageData;
-  skills: string[];
-};
+import { Project } from "@/types/project";
 
 type ProjectProps = {
   projects: Project[];

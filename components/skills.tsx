@@ -1,5 +1,5 @@
 import React from "react";
-import Skill from "./ui/skill";
+import Skill from "./sub-components/skill";
 
 const skills = () => {
   type Skills = {

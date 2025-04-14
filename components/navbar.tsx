@@ -16,7 +16,7 @@ const navbar = () => {
           <Link href="#skills">Vaardigheden</Link>
         </Button>
         <Button variant="link">
-          <Link href="#education">Opleidingen</Link>
+          <Link href="#experiences">Ervaring</Link>
         </Button>
       </div>
     </nav>

@@ -1,4 +1,5 @@
 import Educations from "@/components/educations";
+import Experiences from "@/components/experiences";
 import Footer from "@/components/footer";
 import Navbar from "@/components/navbar";
 import Profile from "@/components/profile";
@@ -13,6 +14,7 @@ export default function Home() {
       <Projects />
       <div className="bg-card rounded-2xl px-6 border">
         <Skills />
+        <Experiences />
         <Educations />
       </div>
       <Footer />

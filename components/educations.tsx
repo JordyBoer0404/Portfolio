@@ -1,24 +1,18 @@
 import React from "react";
-import Education from "./education";
+import Education from "./sub-components/cvformat";
+import { CVformat } from "@/types/cvformat";
 
 const educations = () => {
-  type Education = {
-    title: string;
-    school: string;
-    time: string;
-    status: string;
-  };
-
-  const educations: Education[] = [
+  const educations: CVformat[] = [
     {
       title: "HBO ICT Software Engineer",
-      school: "De Haagse Hogeschool",
+      place: "De Haagse Hogeschool",
       time: "september 2019 - april 2024",
       status: "Behaald",
     },
     {
       title: "Applicatie & Media Ontwikkelaar",
-      school: "MBO Rijnland",
+      place: "MBO Rijnland",
       time: "augustus 2016 - juni 2019",
       status: "Behaald",
     },
@@ -27,9 +21,9 @@ const educations = () => {
   return (
     <div id="education" className="flex flex-col py-8">
       <h3>Opleidingen</h3>
-      <div className="flex flex-row flex-wrap gap-4 md:gap-0">
+      <div className="grid lg:grid-cols-2 lg:place-items-center gap-4 md:gap-0">
         {educations.map((education) => (
-          <Education key={education.title} education={education} />
+          <Education key={education.title} cvformat={education} />
         ))}
       </div>
     </div>

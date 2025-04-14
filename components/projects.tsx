@@ -1,24 +1,24 @@
 import React from "react";
 
+import soullinkTeambuilderImg from "../public/soullinkteambuilder.jpg";
 import platinumDragonImg from "../public/platinumdragon.jpg";
 import cyberGotchiImg from "../public/cybergotchi.jpg";
 import routeplannerImg from "../public/routeplanner.jpg";
 
-import { StaticImageData } from "next/image";
-
-import ProjectSlider from "./projectSlider";
+import ProjectSlider from "./sub-components/projectSlider";
+import { Project } from "@/types/project";
 
 const projects = () => {
-  type Project = {
-    title: string;
-    description: string;
-    type: "Persoonlijk project" | "School project";
-    mobile: boolean;
-    image: StaticImageData;
-    skills: string[];
-  };
-
   const projects: Project[] = [
+    {
+      title: "Pokemon Soullink Team Builder",
+      description: "Soullink teambuilder tool",
+      type: "Persoonlijk project",
+      mobile: false,
+      image: soullinkTeambuilderImg,
+      skills: ["Next.js", "Typescript", "React", "Tailwind"],
+      link: "https://soullink-teambuilder.vercel.app/",
+    },
     {
       title: "Platinum Dragon",
       description: "Playstation trophy hunting webapp",
@@ -26,6 +26,7 @@ const projects = () => {
       mobile: false,
       image: platinumDragonImg,
       skills: ["Next.js", "Typescript", "React", "Tailwind", "Supabase"],
+      link: "",
     },
     {
       title: "CyberGotchi",
@@ -34,6 +35,7 @@ const projects = () => {
       mobile: true,
       image: cyberGotchiImg,
       skills: ["React Native", "Firebase"],
+      link: "",
     },
     {
       title: "Offline routeplanner",
@@ -42,6 +44,7 @@ const projects = () => {
       mobile: false,
       image: routeplannerImg,
       skills: ["C#", "Blazor WebAssembly"],
+      link: "",
     },
   ];
 

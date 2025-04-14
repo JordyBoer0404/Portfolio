@@ -9,17 +9,10 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 
-import Skill from "./ui/skill";
-import Image, { StaticImageData } from "next/image";
-
-type Project = {
-  title: string;
-  description: string;
-  type: "Persoonlijk project" | "School project";
-  mobile: boolean;
-  image: StaticImageData;
-  skills: string[];
-};
+import Skill from "./skill";
+import Image from "next/image";
+import { Button } from "../ui/button";
+import { Project } from "@/types/project";
 
 type ProjectProps = {
   project: Project;
@@ -35,7 +28,7 @@ const projectCard = ({ project }: ProjectProps) => {
       {project.mobile ? (
         <CardContent className="flex flex-row aspect-square gap-4 items-center justify-center">
           <Image
-            className="w-30 h-65 lg:w-35 lg:h-75 rounded-2xl"
+            className="w-30 h-65 lg:w-35 lg:h-75 rounded-2xl ring ring-offset-foreground/50 ring-offset-1 border-2 border-card"
             src={project.image}
             alt={project.title}
           ></Image>
@@ -48,11 +41,11 @@ const projectCard = ({ project }: ProjectProps) => {
       ) : (
         <CardContent className="flex flex-col gap-4 aspect-square justify-center">
           <Image
-            className="aspect-[16/9] rounded-2xl"
+            className="aspect-[16/9] rounded-2xl ring ring-offset-foreground/50 ring-offset-1 border-2 border-card"
             src={project.image}
             alt={project.title}
           ></Image>
-          <div className="flex flex-row flex-wrap gap-2 ">
+          <div className="flex flex-row flex-wrap gap-2">
             {project.skills.map((skill) => (
               <Skill key={skill} skill={skill} />
             ))}
@@ -60,7 +53,16 @@ const projectCard = ({ project }: ProjectProps) => {
         </CardContent>
       )}
 
-      <CardFooter>{project.type}</CardFooter>
+      <CardFooter className="justify-between">
+        <p>{project.type}</p>
+        {project.link && (
+          <Button className="-my-2" size={"sm"}>
+            <a href={project.link} target="_blank">
+              Website
+            </a>
+          </Button>
+        )}
+      </CardFooter>
     </Card>
   );
 };

@@ -31,11 +31,11 @@ const skills = () => {
   return (
     <div id="skills" className="flex flex-col py-8">
       <h3>Vaardigheden</h3>
-      <div className="flex flex-row flex-wrap py-2">
+      <div className="grid lg:grid-cols-2 lg:place-items-center lg:items-start gap-4">
         {Object.entries(vaardigheden).map(([vaardigheid, skills]) => (
           <div
             key={vaardigheid}
-            className="flex flex-col sm:w-1/1 md:w-1/2 xl:items-center md:px-4 gap-2 mb-6"
+            className="flex flex-col lg:w-[350px] md:px-4 gap-2 mb-6"
           >
             <h4 className="text-c3">{vaardigheid}</h4>
             <div className="flex flex-row flex-wrap gap-4">

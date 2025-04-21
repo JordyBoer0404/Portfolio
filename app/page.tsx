@@ -8,16 +8,18 @@ import Skills from "@/components/skills";
 
 export default function Home() {
   return (
-    <main className="px-8 md:px-32">
-      <Navbar />
-      <Profile />
-      <Projects />
-      <div className="bg-card rounded-2xl px-6 border">
-        <Skills />
-        <Experiences />
-        <Educations />
+    <main className="w-full">
+      <div className="md:max-w-screen-md lg:max-w-screen-lg xl:max-w-screen-xl mx-auto px-4 md:px-8">
+        <Navbar />
+        <Profile />
+        <Projects />
+        <div className="bg-card rounded-2xl px-6 border">
+          <Skills />
+          <Experiences />
+          <Educations />
+        </div>
+        <Footer />
       </div>
-      <Footer />
     </main>
   );
 }

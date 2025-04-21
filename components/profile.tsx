@@ -24,7 +24,7 @@ const profile = () => {
           </h4>
         </div>
       </div>
-      <div className="flex flex-col xl:w-4/12 gap-4 items-center justify-center">
+      <div className="flex flex-col xl:w-4/12 gap-4 items-center xl:items-end justify-center">
         <Avatar>
           <AvatarImage src="https://github.com/shadcn.png" />
           <AvatarFallback>Loading...</AvatarFallback>

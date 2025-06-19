@@ -13,10 +13,7 @@ const navbar = () => {
           <Link href="#projects">Projecten</Link>
         </Button>
         <Button variant="link">
-          <Link href="#skills">Vaardigheden</Link>
-        </Button>
-        <Button variant="link">
-          <Link href="#experiences">Ervaring</Link>
+          <Link href="#skills">CV</Link>
         </Button>
       </div>
     </nav>

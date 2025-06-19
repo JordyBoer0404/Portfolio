@@ -52,14 +52,12 @@ const ProjectSlider = ({ projects }: ProjectProps) => {
           {projects.map((project) => (
             <CarouselItem
               key={project.title}
-              className="md:basis-1/2 xl:basis-1/3"
+              className="md:basis-1/2 xl:basis-1/3 lg:py-4"
             >
               <ProjectCard project={project} />
             </CarouselItem>
           ))}
         </CarouselContent>
-        <CarouselPrevious />
-        <CarouselNext />
       </Carousel>
       <div className="flex justify-center space-x-2 mt-4">
         {Array.from({ length: count }).map((_, index) => (

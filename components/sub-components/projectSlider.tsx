@@ -6,8 +6,6 @@ import {
   type CarouselApi,
   CarouselContent,
   CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
 } from "../ui/carousel";
 import ProjectCard from "./projectCard";
 import { Project } from "@/types/project";
@@ -52,7 +50,7 @@ const ProjectSlider = ({ projects }: ProjectProps) => {
           {projects.map((project) => (
             <CarouselItem
               key={project.title}
-              className="md:basis-1/2 xl:basis-1/3 lg:py-4"
+              className="md:basis-1/2 xl:basis-1/3 py-5"
             >
               <ProjectCard project={project} />
             </CarouselItem>

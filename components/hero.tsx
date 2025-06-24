@@ -2,11 +2,11 @@ import React from "react";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Button } from "./ui/button";
 
-const profile = () => {
+const hero = () => {
   return (
-    <div className="flex flex-col gap-8 xl:gap-0 py-2 xl:flex-row lg:py-16">
+    <div className="flex flex-col gap-8 xl:gap-0 py-8 xl:flex-row lg:py-16">
       <div className="xl:w-8/12 xl:max-w-8/12">
-        <h1 className="text-center md:text-left font-medium text-c3 text-5xl md:text-7xl mb-4">
+        <h1 className="text-left font-medium text-c3 text-5xl md:text-7xl mb-4">
           Welkom! <span className="text-foreground">mijn naam is </span> Jordy
           Boer.
         </h1>
@@ -29,7 +29,7 @@ const profile = () => {
           <AvatarImage src="https://github.com/shadcn.png" />
           <AvatarFallback>Loading...</AvatarFallback>
         </Avatar>
-        <div className="flex flex-row ring-1 ring-c3 rounded-2xl p-1">
+        <div className="flex flex-row ring-1 ring-c3 rounded-2xl p-1 bg-gradient-to-b from-transparent to-orange-500/10">
           <Button variant="link">
             <a
               href="https://www.linkedin.com/in/jordy-boer-326843187/"
@@ -52,4 +52,4 @@ const profile = () => {
   );
 };
 
-export default profile;
+export default hero;

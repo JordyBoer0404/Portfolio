@@ -23,8 +23,9 @@ const ProjectCardContent = (props: { project: Project }) => {
   return (
     <Card
       className={`${
-        props.project.link && "transition-all duration-300 hover:-translate-y-4"
-      } mx-1`}
+        props.project.link &&
+        "transition-all duration-300 hover:-translate-y-4 hover:bg-orange-500/5"
+      } mx-1 bg-gradient-to-b from-transparent to-orange-500/5 ring-1 ring-orange-500`}
     >
       <CardHeader>
         <CardTitle>{props.project.title}</CardTitle>

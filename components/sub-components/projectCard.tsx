@@ -10,60 +10,61 @@ import {
 } from "@/components/ui/card";
 
 import Skill from "./skill";
-import Image from "next/image";
-import { Button } from "../ui/button";
 import { Project } from "@/types/project";
+import Image from "next/image";
+import Link from "next/link";
+import { Button } from "../ui/button";
 
 type ProjectProps = {
   project: Project;
 };
 
-const projectCard = ({ project }: ProjectProps) => {
+const ProjectCardContent = (props: { project: Project }) => {
   return (
-    <Card>
+    <Card
+      className={`${
+        props.project.link &&
+        "transition-all duration-300 hover:-translate-y-4 hover:bg-orange-500/5"
+      } mx-1 bg-gradient-to-b from-transparent to-orange-500/5 ring-1 ring-orange-500`}
+    >
       <CardHeader>
-        <CardTitle>{project.title}</CardTitle>
-        <CardDescription>{project.description}</CardDescription>
+        <CardTitle>{props.project.title}</CardTitle>
+        <CardDescription>{props.project.description}</CardDescription>
       </CardHeader>
-      {project.mobile ? (
-        <CardContent className="flex flex-row aspect-square gap-4 items-center justify-center">
-          <Image
-            className="w-30 h-65 lg:w-35 lg:h-75 rounded-2xl ring ring-offset-foreground/50 ring-offset-1 border-2 border-card"
-            src={project.image}
-            alt={project.title}
-          ></Image>
-          <div className="flex flex-col flex-wrap justify-end gap-2">
-            {project.skills.map((skill) => (
-              <Skill key={skill} skill={skill} />
-            ))}
-          </div>
-        </CardContent>
-      ) : (
-        <CardContent className="flex flex-col gap-4 aspect-square justify-center">
-          <Image
-            className="aspect-[16/9] rounded-2xl ring ring-offset-foreground/50 ring-offset-1 border-2 border-card"
-            src={project.image}
-            alt={project.title}
-          ></Image>
-          <div className="flex flex-row flex-wrap gap-2">
-            {project.skills.map((skill) => (
-              <Skill key={skill} skill={skill} />
-            ))}
-          </div>
-        </CardContent>
-      )}
 
-      <CardFooter className="justify-between">
-        <p>{project.type}</p>
-        {project.link && (
-          <Button className="-my-2" size={"sm"}>
-            <a href={project.link} target="_blank">
-              Website
-            </a>
-          </Button>
-        )}
+      <CardContent className="flex flex-col gap-4 aspect-square justify-center">
+        <div className="relative aspect-[16/9]">
+          <Image
+            fill
+            className="rounded-2xl ring ring-offset-foreground/50 ring-offset-1 border-2 border-card"
+            src={props.project.image}
+            alt={props.project.title}
+          />
+        </div>
+        <div className="flex flex-row flex-wrap gap-2">
+          {props.project.skills.map((skill) => (
+            <Skill key={skill} skill={skill} />
+          ))}
+        </div>
+      </CardContent>
+      <CardFooter className="block lg:hidden">
+        {props.project.link && <Button>Website</Button>}
       </CardFooter>
     </Card>
+  );
+};
+
+const projectCard = ({ project }: ProjectProps) => {
+  return (
+    <>
+      {project.link ? (
+        <Link href={project.link} target="_blank">
+          <ProjectCardContent project={project} />
+        </Link>
+      ) : (
+        <ProjectCardContent project={project} />
+      )}
+    </>
   );
 };
 

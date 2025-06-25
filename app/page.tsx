@@ -9,8 +9,8 @@ import Skills from "@/components/skills";
 export default function Home() {
   return (
     <main className="w-full">
+      <Navbar />
       <div className="md:max-w-screen-md lg:max-w-screen-lg xl:max-w-screen-xl mx-auto px-4 md:px-8">
-        <Navbar />
         <Hero />
         <Projects />
         <div className="bg-card rounded-2xl px-6 border my-8 lg:my-16">

@@ -4,10 +4,10 @@ import { Button } from "./ui/button";
 
 const hero = () => {
   return (
-    <div className="flex flex-col gap-8 xl:gap-0 py-8 xl:flex-row lg:py-16">
+    <div className="flex flex-col gap-8 xl:gap-0 py-8 xl:flex-row lg:py-16 mt-8">
       <div className="xl:w-8/12 xl:max-w-8/12">
-        <h1 className="text-left font-medium text-c3 text-5xl md:text-7xl mb-4">
-          Welkom! <span className="text-foreground">mijn naam is </span> Jordy
+        <h1 className="text-balance font-medium text-c3 text-5xl/tight md:text-7xl/tight mb-4">
+          <span className="text-foreground">Welkom! mijn naam is </span> Jordy
           Boer.
         </h1>
         <div className="flex flex-col gap-4">
@@ -26,7 +26,7 @@ const hero = () => {
       </div>
       <div className="flex flex-col xl:w-4/12 gap-4 items-center xl:items-end justify-center">
         <Avatar>
-          <AvatarImage src="https://github.com/shadcn.png" />
+          <AvatarImage src="https://github.com/shadcn.png" alt="Jordy Boer" />
           <AvatarFallback>Loading...</AvatarFallback>
         </Avatar>
         <div className="flex flex-row ring-1 ring-c3 rounded-2xl p-1 bg-gradient-to-b from-transparent to-orange-500/10">

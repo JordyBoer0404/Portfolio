@@ -12,7 +12,7 @@ const projects = () => {
       <div className="space-y-2">
         <h3>Projecten</h3>
         <p className="text-center text-sm md:text-lg">
-          Ik ben zelf altijd bezig met het ontwikkelen van software om mijn
+          Ik ben altijd bezig met het ontwikkelen van software om mijn
           vaardigheden en kennis te verbeteren.
         </p>
         <p className="text-center text-sm md:text-lg">

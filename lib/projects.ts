@@ -4,14 +4,14 @@ export const projectsData: Project[] = [
   {
     title: "Elly Beauty Kapsalon",
     description: "Beauty Salon Website",
-    image: "/projects/ellybeautykapsalon.png",
+    image: "/projects/ellybeautykapsalon.jpg",
     skills: ["Next.js", "Typescript", "React", "Tailwind"],
     link: "https://www.ellybeautykapsalon.nl/",
   },
   {
     title: "Kurason Humilde",
     description: "Stichting Website",
-    image: "/projects/kurasonhumilde.png",
+    image: "/projects/kurasonhumilde.jpg",
     skills: ["Next.js", "Typescript", "React", "Tailwind", "Resend"],
     link: "https://www.kurason-humilde.nl/",
   },

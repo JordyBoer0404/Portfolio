@@ -13,17 +13,17 @@ const hero = () => {
           </span>
         </h1>
         <div className="flex flex-col gap-4">
-          <h4>
+          <p className="text-sm md:text-lg">
             Ik ben een gemotiveerde junior software engineer met een passie voor
             ontwikkeling en technologie. Mijn doel is om mijn kwaliteiten en
             vaardigheden in te zetten in mijn persoonlijk en bedrijfs leven, om
             mijn ICT-gerelateerde kennis te vergroten en te verbeteren.
-          </h4>
-          <h4>
+          </p>
+          <p className="text-sm md:text-lg">
             Op deze website vind je mijn projecten, vaardigheden en meer
             informatie over mij. Aarzel niet om contact op te nemen of mijn
             LinkedIn & Github te bekijken!
-          </h4>
+          </p>
         </div>
       </div>
       <div className="flex flex-col xl:w-4/12 gap-4 items-center xl:items-end justify-center">

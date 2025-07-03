@@ -10,7 +10,11 @@ const projects = () => {
       className="flex flex-col py-8 items-center gap-4 lg:py-16"
     >
       <div className="space-y-2">
-        <h3>Projecten</h3>
+        <h2>
+          <span className="bg-gradient-to-br from-orange-400 to-orange-600 inline-block text-transparent bg-clip-text">
+            Projecten
+          </span>
+        </h2>
         <p className="text-center text-sm md:text-lg">
           Ik ben altijd bezig met het ontwikkelen van software om mijn
           vaardigheden en kennis te verbeteren.

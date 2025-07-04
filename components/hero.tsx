@@ -14,7 +14,7 @@ const hero = () => {
         </h1>
         <div className="flex flex-col gap-4">
           <p className="text-sm md:text-lg">
-            Ik ben een gemotiveerde junior software engineer met een passie voor
+            Ik ben een gemotiveerde software engineer met een passie voor
             ontwikkeling en technologie. Mijn doel is om mijn kwaliteiten en
             vaardigheden in te zetten in mijn persoonlijk en bedrijfs leven, om
             mijn ICT-gerelateerde kennis te vergroten en te verbeteren.
